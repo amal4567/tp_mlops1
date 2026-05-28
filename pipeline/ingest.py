@@ -5,8 +5,8 @@ from pathlib import Path
 csv_path = Path("data/ventes.csv")
 db_path = "ventes.duckdb"
 
-# Chargement du fichier CSV local
-df = pd.read_csv(csv_path)
+# Chargement du fichier CSV local en ignorant les espaces après les virgules
+df = pd.read_csv(csv_path, skipinitialspace=True)
 
 # Connexion à la base DuckDB locale et chargement
 con = duckdb.connect(db_path)

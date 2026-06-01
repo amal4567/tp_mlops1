@@ -1,0 +1,10 @@
+1. En quoi ce pipeline est-il plus structuré qu’un notebook unique ? Ce pipeline est modulaire et découpe le code en scripts à responsabilité unique, ce qui sécurise le flux en bloquant son exécution dès qu'une anomalie survient, contrairement à un notebook linéaire conçu pour l'exploration. 
+2. Quel est le rôle de Git dans ce projet ? Git assure le versionnement, la traçabilité et l'historique complet du code à travers chaque commit, tout en facilitant le travail d'équipe sécurisé et l'automatisation des tests. 
+3. Quel est le rôle de requirements.txt ? Il liste l'intégralité des dépendances nécessaires avec leurs versions exactes, garantissant ainsi la portabilité et la reproductibilité parfaite de l'environnement sur n'importe quelle machine ou serveur. 
+4. Pourquoi ajouter une étape validate.py ? Cette étape applique une approche Fail-Fast pour bloquer immédiatement les données corrompues ou incomplètes dès l'entrée, protégeant ainsi l'entrepôt DuckDB et les transformations futures. 
+5. Quel est le rôle de dbt test ? Il permet d'automatiser le contrôle qualité directement au sein de la base de données en vérifiant que les tables transformées respectent des contraintes strictes comme la non-nullité. 
+6. Qu’apporte Dagster par rapport à une exécution manuelle ? Dagster automatise l'enchaînement logique des tâches, offre une interface graphique pour suivre l'état de santé du pipeline et centralise la gestion des erreurs et des logs. 
+7. Qu’apporte la CI ? L'Intégration Continue automatise la vérification de la syntaxe et la validation du projet à chaque modification de code, garantissant ainsi la stabilité permanente de la branche principale. 
+8. Que manque-t-il encore pour un pipeline pleinement industrialisé ?
+Il manque un entrepôt de données cloud distant (comme Snowflake), une gestion sécurisée des variables d'environnement pour les secrets, un système d'alerte en cas de panne et la conteneurisation avec Docker.
+

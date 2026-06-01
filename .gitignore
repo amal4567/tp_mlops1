@@ -3,3 +3,5 @@ __pycache__/
 target/
 dbt_packages/
 *.duckdb
+.tmp_dagster_home*/
+*.db
